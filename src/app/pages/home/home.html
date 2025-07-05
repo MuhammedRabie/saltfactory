@@ -1,0 +1,56 @@
+<!-- Carousel Section -->
+<div id="mainCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000" style="height: 400px;">
+  <div class="carousel-inner rounded-3 overflow-hidden h-100">
+    <div class="carousel-item active h-100">
+      <img src="assets/pics/8.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Salt 1" />
+    </div>
+    <div class="carousel-item h-100">
+      <img src="assets/pics/6.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Salt 2" />
+    </div>
+    <div class="carousel-item h-100">
+      <img src="assets/pics/7.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Salt 3" />
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- Intro Section -->
+<section class="container text-center intro-block mb-5">
+  <h2 class="section-title" [class.text-end]="currentLang === 'ar'" [class.text-start]="currentLang === 'en'">
+    {{ currentLang === 'en' ? 'Welcome to Serra Process' : 'مرحباً بكم في سيرّا بروسس' }}
+  </h2>
+  <p class="lead" [class.text-end]="currentLang === 'ar'" [class.text-start]="currentLang === 'en'">
+    {{
+      currentLang === 'en'
+        ? 'We provide process automation and industrial control solutions tailored to your needs.'
+        : 'نحن نوفر حلول الأتمتة الصناعية والتحكم المخصصة لتلبية احتياجاتكم.'
+    }}
+  </p>
+</section>
+
+<hr class="my-5" />
+
+<!-- Grid Section -->
+<section class="container">
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let item of gridItems; let i = index">
+      <div class="card text-white shadow-sm border-0 overflow-hidden h-100">
+        <img
+          [src]="gridImages[i]"
+          class="card-img"
+          [attr.alt]="currentLang === 'en' ? item.text : item.textAr"
+        />
+        <div class="card-img-overlay d-flex align-items-end bg-dark bg-opacity-50">
+          <h5 class="card-title text-white">
+            {{ currentLang === 'en' ? item.text : item.textAr }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

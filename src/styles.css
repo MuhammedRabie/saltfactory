@@ -1,1 +1,171 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===========================
+   Refined Card + Section Style
+=========================== */
+.card,
+section,
+div.section-block {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover,
+section:hover,
+div.section-block:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Inputs & Buttons
+=========================== */
+input,
+textarea,
+select {
+  border-radius: 6px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* ===========================
+   Utility Enhancements
+=========================== */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 12px;
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: #888;
+  font-size: 0.95rem;
+}
+/* Theme Transition */
+:root {
+  --transition-speed: 0.4s;
+}
+
+body {
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+  margin: 3rem auto;
+  max-width: 80%;
+}
+
+/* Responsive Container Overrides */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.social-icons a {
+  color: var(--navbar-text);
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: var(--primary);
+}
+/* Theme Transition */
+:root {
+  --transition-speed: 0.4s;
+}
+
+body {
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
+  margin: 4rem auto;
+  max-width: 85%;
+}
+
+/* Carousel Styling */
+.carousel-inner img {
+  object-fit: cover;
+  height: 400px;
+  transition: transform 0.4s ease;
+}
+.carousel-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  border-left: 4px solid var(--primary-color);
+  padding-left: 12px;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.card-img-overlay {
+  transition: background-color 0.4s ease;
+}
+.card:hover .card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Lead Text */
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Take all available vertical space */
+}
+

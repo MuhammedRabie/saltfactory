@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <h2>{{ currentLang === 'en' ? 'Contact Us' : 'اتصل بنا' }}</h2>
+  <p>
+    {{ currentLang === 'en'
+      ? 'We’d love to hear from you. Reach us through the channels below:'
+      : 'نحن نحب أن نسمع منك. تواصل معنا من خلال القنوات التالية:' }}
+  </p>
+
+  <ul class="list-unstyled">
+    <li>
+      <strong>{{ currentLang === 'en' ? 'Phone:' : 'الهاتف:' }}</strong>
+      <span dir="ltr">+20 100 123 4567</span>
+    </li>
+    <li>
+      <strong>{{ currentLang === 'en' ? 'Email:' : 'البريد الإلكتروني:' }}</strong>
+      <span dir="ltr">info&#64;serraprocess.com</span>
+    </li>
+  </ul>
+
+  <div class="social-icons mt-3">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="me-3">
+      <i class="bi bi-facebook fs-4"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="me-3">
+      <i class="bi bi-linkedin fs-4"></i>
+    </a>
+        
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <i class="bi bi-twitter fs-4"></i>
+    </a>
+  </div>
+</div>

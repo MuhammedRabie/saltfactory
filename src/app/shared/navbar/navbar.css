@@ -1,0 +1,94 @@
+.navbar-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: padding 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-container.shrink {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--navbar-text);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  color: var(--navbar-text);
+  cursor: pointer;
+}
+.theme-toggle.dark i {
+  color: var(--primary);
+}
+
+/* Language Flag Buttons */
+.lang-icon {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.lang-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Flag Images */
+.flag-img {
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlight active language */
+.active-flag .flag-img {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}

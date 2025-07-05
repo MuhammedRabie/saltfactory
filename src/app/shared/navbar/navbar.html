@@ -1,0 +1,50 @@
+<header class="navbar-container" [class.shrink]="isScrolled">
+  <div class="navbar-content">
+    <!-- Logo -->
+    <a class="logo" routerLink="/">SerraProcess</a>
+
+    <!-- Navigation Links -->
+<nav class="nav-links" role="navigation">
+  <a [routerLink]="['/', currentLang]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <span *ngIf="currentLang === 'en'">Home</span>
+    <span *ngIf="currentLang === 'ar'">الرئيسية</span>
+  </a>
+  <a [routerLink]="['/', currentLang, 'about']" routerLinkActive="active">
+    <span *ngIf="currentLang === 'en'">About</span>
+    <span *ngIf="currentLang === 'ar'">من نحن</span>
+  </a>
+  <a [routerLink]="['/', currentLang, 'products']" routerLinkActive="active">
+    <span *ngIf="currentLang === 'en'">Products</span>
+    <span *ngIf="currentLang === 'ar'">المنتجات</span>
+  </a>
+  <a [routerLink]="['/', currentLang, 'contact']" routerLinkActive="active">
+    <span *ngIf="currentLang === 'en'">Contact</span>
+    <span *ngIf="currentLang === 'ar'">اتصل بنا</span>
+  </a>
+</nav>
+
+
+    <!-- Right Controls -->
+    <div class="controls">
+      <!-- Language Flags -->
+      <button
+        class="lang-icon"
+        (click)="switchLanguage('en')"
+        [class.active-flag]="currentLang === 'en'"
+        title="English"
+        aria-label="Switch to English"
+      >
+        <img src="https://flagcdn.com/us.svg" alt="EN" class="flag-img" />
+      </button>
+      <button
+        class="lang-icon"
+        (click)="switchLanguage('ar')"
+        [class.active-flag]="currentLang === 'ar'"
+        title="Arabic"
+        aria-label="Switch to Arabic"
+      >
+        <img src="https://flagcdn.com/eg.svg" alt="AR" class="flag-img" />
+      </button>
+    </div>
+  </div>
+</header>
