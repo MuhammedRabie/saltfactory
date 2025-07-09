@@ -3,7 +3,7 @@ name: Deploy Angular to GitHub Pages
 on:
   push:
     branches:
-      - main  # Or 'master' if your repo uses that
+      - master
 
 jobs:
   build:
@@ -21,11 +21,11 @@ jobs:
       - name: 📦 Install Dependencies
         run: npm ci
 
-      - name: 🛠 Build Project
+      - name: 🛠 Build Angular Project
         run: npm run build --configuration production
 
       - name: 🚀 Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # The branch to deploy to
-          folder: dist/saltfactory  # Adjust if different
+          branch: gh-pages
+          folder: dist/saltfactory
